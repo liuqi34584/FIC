@@ -7,8 +7,8 @@ import os
 input_folder = './step2/JPEGImages/'
 input_segmentation_folder = './step2/SegmentationClassPNG/'
 
-output_folder = './images/'
-output_segmentation_folder = './masks/'
+output_folder = './step3/JPEGImages/'
+output_segmentation_folder = './step3/SegmentationClassPNG/'
 
 
 # 确保目标保存文件夹存在
