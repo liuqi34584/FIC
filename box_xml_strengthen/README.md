@@ -15,7 +15,7 @@
 
 解决思路图示：
 
-|1.原图与标注|2.对原图的增强处理|3.绘制黑底白面标注，并增强|
+|1.原图与标注|2.对原图的仿射处理|3.绘制黑底白面标注，并仿射|
 |---------|---------|---------|
 |<left><img src = "./example_out/images_step0.jpg" width = 80%><left> |<left><img src = "./example_out/images_step1.jpg"  width = 80%><left>|<left><img src = "./example_out/images_step2.jpg"  width = 80%><left>|
 
@@ -26,22 +26,22 @@
 
 # 项目详细细节
 
-|原图|旋转原图与注释|
+|原图|同步旋转注释|
 |---------|---------|
 |<left><img src = "./example_out/images2.jpg" ><left> |<left><img src = "./example_out/rotate.jpg"><left>|
 
-|原图|翻转原图与注释|
+|原图|同步翻转注释|
 |---------|---------|
 |<left><img src = "./example_out/images2.jpg"><left> |<left><img src = "./example_out/turnover.jpg"><left>|
 
-|原图|仿射变换原图与注释|
+|原图|同步仿射变换注释|
 |---------|---------|
 |<left><img src = "./example_out/images2.jpg"><left> |<left><img src = "./example_out/warpaffine.jpg"><left>|
 
-|原图|裁剪原图的四边|
+|原图|同步裁剪注释四边|
 |---------|---------|
 |<left><img src = "./example_out/images2.jpg"><left> |<left><img src = "./example_out/cut.jpg"><left>|
 
-|原图|镜像填充原图与标注|
+|原图|同步镜像填充标注|
 |---------|---------|
 |<left><img src = "./example_out/images2.jpg"><left> |<left><img src = "./example_out/padding.jpg"><left>|
