@@ -11,11 +11,11 @@ from strengthen.warpaffine import warpAffine_img, warpAffine_box
 from strengthen.padding import padding_img, padding_box
 from strengthen.cut import cut_img, cut_box
 
-images_path = "./box_xml_strengthen/test_images/JPEGImages/images1.jpg"
-xml_path = "./box_xml_strengthen/test_images/Annotations/images1.xml"
+images_path = "./box_xml_strengthen/test_images/JPEGImages/images2.jpg"
+xml_path = "./box_xml_strengthen/test_images/Annotations/images2.xml"
 
-images_out_path = "./box_xml_strengthen/test_images/out_images/JPEGImages/images1.jpg"
-xml_out_path = "./box_xml_strengthen/test_images/out_images/Annotations/images1.xml"
+images_out_path = "./box_xml_strengthen/test_images/out_images/JPEGImages/images2.jpg"
+xml_out_path = "./box_xml_strengthen/test_images/out_images/Annotations/images2.xml"
 
 # 读取原图与注释
 img = cv2.imread(images_path, 1)
@@ -32,8 +32,8 @@ coordinates = read_annotation(xml_path)
 # new_box = turnover_box(img, coordinates, -1)
 
 # 仿射变换原图与注释
-new_img = warpAffine_img(img, 60)
-new_box = warpAffine_box(img, coordinates, 60)
+new_img = warpAffine_img(img, 20)
+new_box = warpAffine_box(img, coordinates, 20)
 
 # # 镜像填充原图的四边
 # new_img = padding_img(img, 0, 100, 50, 0)
