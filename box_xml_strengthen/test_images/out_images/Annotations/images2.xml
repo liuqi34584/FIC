@@ -4,12 +4,12 @@
     <path>value1</path>
     <source>
         <database>Unknown</database>
-    </source>
+        </source>
     <size>
         <width>168</width>
         <height>300</height>
         <depth>3</depth>
-    </size>
+        </size>
     <segmented>0</segmented>
     <object>
         <name>person</name>
@@ -21,8 +21,8 @@
             <ymin>156</ymin>
             <xmax>156</xmax>
             <ymax>168</ymax>
-        </bndbox>
-    </object>
+            </bndbox>
+        </object>
     <object>
         <name>ad</name>
         <pose>Unspecified</pose>
@@ -33,8 +33,8 @@
             <ymin>143</ymin>
             <xmax>190</xmax>
             <ymax>168</ymax>
-        </bndbox>
-    </object>
+            </bndbox>
+        </object>
     <object>
         <name>person</name>
         <pose>Unspecified</pose>
@@ -45,6 +45,6 @@
             <ymin>123</ymin>
             <xmax>256</xmax>
             <ymax>168</ymax>
-        </bndbox>
-    </object>
+            </bndbox>
+        </object>
     </annotation>

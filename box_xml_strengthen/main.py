@@ -4,7 +4,7 @@ import xml.etree.ElementTree as ET
 import os
 
 # 加载数据增强库
-from strengthen.xml import read_annotation, write_bbox_to_voc_xml
+from strengthen.make_xml import read_annotation, write_bbox_to_voc_xml
 from strengthen.rotation import rotate_img, rotate_box
 from strengthen.turnover import turnover_img, turnover_box
 from strengthen.warpaffine import warpAffine_img, warpAffine_box
