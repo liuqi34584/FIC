@@ -25,7 +25,8 @@ def turnover_box(image, box, angle):
         # 寻找最大的区域
         contours, _ = cv2.findContours(padded_image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
         # 寻找最大区域的轮廓
-        contour = max(contours, key=cv2.contourArea)
+        if len(contours) != 0:
+           contour = max(contours, key=cv2.contourArea)
 
         x, y, w, h = cv2.boundingRect(contour)
         contours_list.append((name, x, y, x+w, y+h))
