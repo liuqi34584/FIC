@@ -24,16 +24,16 @@ coordinates = read_annotation(xml_path)
 # 核心处理调用，需要哪一个功能就打开那一个注释，一次只开一个功能
 
 # 旋转原图与注释
-# new_img = rotate_img(img, 60)
-# new_box = rotate_box(img, coordinates, 60)
+new_img = rotate_img(img, 60)
+new_box = rotate_box(img, coordinates, 60, "cross_line")  # "cross_line"  "ellipse"  "rectangle"
 
 # 翻转原图与注释
 # new_img = turnover_img(img, -1)
 # new_box = turnover_box(img, coordinates, -1)
 
 # 仿射变换原图与注释
-new_img = warpAffine_img(img, 20)
-new_box = warpAffine_box(img, coordinates, 20)
+# new_img = warpAffine_img(img, 20)
+# new_box = warpAffine_box(img, coordinates, 20)
 
 # # 镜像填充原图的四边
 # new_img = padding_img(img, 0, 100, 50, 0)

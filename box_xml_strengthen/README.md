@@ -45,3 +45,22 @@
 |原图|同步镜像填充标注|
 |---------|---------|
 |<left><img src = "./example_out/images2.jpg"><left> |<left><img src = "./example_out/padding.jpg"><left>|
+
+# 旋转增强的补充
+
+问题，对于旋转增强出现了坐标框过大的情况，现在给出几种可选方案。
+
+使用方式：参考main.py
+```python
+# 旋转原图与注释
+new_img = rotate_img(img, 60)
+new_box = rotate_box(img, coordinates, 60, "ellipse")
+```
+其中，rotate_box模式可选参数有 ``` "cross_line"  "ellipse"  "rectangle"```
+
+效果如图,对比效果选择合适的：
+|绘制标志|寻找坐标框|应用到原图效果|
+|---------|---------|---------|
+|<left><img src = "./example_out/rotation_cross_line.jpg"><left> |<left><img src = "./example_out/rotation_cross_line_out.jpg"><left>|<left><img src = "./example_out/cross_line.png"><left>|
+|<left><img src = "./example_out/rotation_ellipse.jpg"><left> |<left><img src = "./example_out/rotation_ellipse_out.jpg"><left>|<left><img src = "./example_out/ellipse.png"><left>|
+|<left><img src = "./example_out/rotation_rectangle.jpg"><left> |<left><img src = "./example_out/rotation_rectangle_out.jpg"><left>|<left><img src = "./example_out/rectangle.png"><left>|
