@@ -1,0 +1,26 @@
+<annotation>
+    <folder>../images/</folder>
+    <filename>00004.jpg</filename>
+    <path>./labelme_to_everything/data/example_out/xml/00004.xml</path>
+    <source>
+        <database>Unknown</database>
+        </source>
+    <size>
+        <width>650</width>
+        <height>487</height>
+        <depth>3</depth>
+        </size>
+    <segmented>0</segmented>
+    <object>
+        <name>white</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>27</xmin>
+            <ymin>112</ymin>
+            <xmax>586</xmax>
+            <ymax>440</ymax>
+            </bndbox>
+        </object>
+    </annotation>

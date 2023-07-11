@@ -11,3 +11,12 @@
 |原图|处理后|
 |---------|---------|
 |<left><img src = "./four_corner_mirror/example_out/images.jpg" width = 80%><left> |<left><img src = "./four_corner_mirror/example_out/step3_images_resize512.jpg" width = 80%><left>|
+
+# labelme_to_everything
+这是一个用于解决labelme制作的数据集各种问题的文件夹，主要功能如下：
+1. 根据labelme的分割标注框，生成目标检测标注框
+2. 更改labelme的名字（有同一对象的不同lael的情况）
+
+|分割原图|处理后|
+|---------|---------|
+|<left><img src = "./labelme_to_everything/data/github_images/json.png" width = 80%><left> |<left><img src = "./labelme_to_everything/data/github_images/json_to_xml.png" width = 80%><left>|
