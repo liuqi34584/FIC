@@ -1,6 +1,7 @@
 import os
 import json
 import xml.etree.ElementTree as ET
+import cv2
 
 # 添加换行符和对齐
 def prettify(elem, level=0):
@@ -120,7 +121,7 @@ def convert_shapes_to_xml(shapes):
 
 
 # 读取 Labelme JSON 文件的像素信息标签,
-# 返回值,如:[('blue', 149, 269, 1142, 741), ('blue', 41, 301, 247, 446)] 1280 915
+# 返回值,如:[('blue', 149, 269, 1142, 741), ('blue', 41, 301, 247, 446)]
 def read_json_info(json_file):
     with open(json_file, 'r') as file:
         json_data = json.load(file)
@@ -140,24 +141,28 @@ def read_json_info(json_file):
 
         box_list.append((label, int(xmin), int(ymin), int(xmax), int(ymax)))
     
-    return box_list, json_data['imageWidth'], json_data['imageHeight']
+    return box_list
 
-def json_to_xml(json_path, xml_out_path):
+def json_to_xml(images_path, json_path, xml_out_path):
     json_file_list = []
     for file in os.listdir(json_path):
         if file.endswith('.json'):
             json_file_list.append(file)
-        
+
+            source_images_path = os.path.join(images_path, file[:-5]+".jpg")
+            img = cv2.imread(source_images_path, 1)
+            height, width, channels = img.shape
+
             source_path = os.path.join(json_path, file)
             target_path = os.path.join(xml_out_path, file[:-5]+".xml")
 
-            box_list,width,height = read_json_info(source_path)
+            box_list = read_json_info(source_path)
             xml_dict = {"folder": "../images/", 
                 "filename": file[:-5]+".jpg",
                 "path": target_path,
                 "width": width,
                 "height": height,
-                "depth": 3,
+                "depth": channels,
                 "box": box_list,
                 "save_path" : target_path
                 }
