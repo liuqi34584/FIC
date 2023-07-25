@@ -29,5 +29,5 @@
 
 要特别注意列表索引标签一一对应，如:
 
-```json_label_turn(json_path, json_out_path, ["blue", "red", "white"], ["1", "2", "3"])```
+```json_label_turn(json_path, json_out_path, ["1", "2", "3"], ["blue", "red", "white"])```
 
